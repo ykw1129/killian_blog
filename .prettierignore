@@ -1,0 +1,21 @@
+node_modules/
+node_modules/**/*
+node_modules/**/*.*
+
+.cache
+public
+
+# Important environment dependent files
+package.json
+package-lock.json
+yarn.lock
+
+# Configuration file of the code formatting plug-in
+.prettierrc
+.prettierignore
+
+# Git ignore files
+.gitignore
+
+#Do not format markdown / mdx, which is easy to disturb the style of your own arrangement
+*.mdx
