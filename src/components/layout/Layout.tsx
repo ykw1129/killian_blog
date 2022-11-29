@@ -1,9 +1,12 @@
 import React, { ReactElement } from 'react'
-
-type Props = {}
+import SEO from '../SEO'
 
 const Layout: React.FC<{ children: ReactElement }> = ({ children }) => {
   return (
-
+    <>
+      <SEO />
+      <main>{children}</main>
+    </>
   )
 }
+export default Layout
