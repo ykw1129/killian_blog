@@ -13,7 +13,7 @@ export const wrapPageElement: GatsbySSR['wrapPageElement'] = ({
 }) => {
   return <Layout {...props}>{element}</Layout>
 }
-export const onRenderBody: GatsbySSR['onRenderBody'] = ({ setHtmlAttributes }) => {
+export const onRenderBody: GatsbySSR['onRenderBody'] = ({ setHtmlAttributes, setBodyAttributes }) => {
   setHtmlAttributes({ lang: "en" })
 }
 /**

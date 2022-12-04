@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
         "trackingId": ""
       }
     } */,
+    'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-mdx',
