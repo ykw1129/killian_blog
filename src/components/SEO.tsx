@@ -32,8 +32,6 @@ const SEO: React.FC<SEOPropsType> = ({
       <meta property='og:type' content={ogType} />
       <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
       <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
-      <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-      <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"></meta>
       {children}
     </>
   )

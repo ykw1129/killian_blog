@@ -1,22 +1,11 @@
+import { useToggleTheme } from '@/hooks';
 import '@/styles/index.scss'
 import { storage } from '@/utils/storage';
 import { Switch } from '@headlessui/react'
 import { Link, navigate } from 'gatsby'
 import { useState, useEffect } from 'react';
 export const Header = () => {
-  const [isDark, setIsDark] = useState(false)
-  const onDarkChange = () => {
-    setIsDark(prev => {
-      prev ? document.documentElement.classList.remove('dark') : document.documentElement.classList.add('dark')
-      storage.set('theme', prev ? 'light' : 'dark')
-      return !prev
-    })
-  }
-  useEffect(() => {
-    let isThemeDark = storage.get('theme') === 'dark' || !('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches
-    isThemeDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')
-    setIsDark(isThemeDark)
-  }, [])
+  const { isDark, onDarkChange } = useToggleTheme();
   return (
     <header className="h-[56px] w-full header-fixed bg-white dark:bg-neutral-900 shadow">
       <section className='max-w-[1280px] w-full m-auto h-full flex items-center'>
